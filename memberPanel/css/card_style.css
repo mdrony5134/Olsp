@@ -1,0 +1,434 @@
+.main__body .card-body {
+    background: rgba(109, 200, 190, 0.25);
+}
+
+span.discountShape {
+    position: absolute;
+    bottom: 12px;
+    height: 15px;
+    right: 26px;
+    transform: rotate( 331deg);
+    font-size: 11px;
+    color: rgb(255 255 255);
+    padding: 4px 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: rgb(154 91 255);
+    border-radius: 26px 0px;
+    width: 10.5em;
+    text-align: center;
+}
+
+.card_body {
+    clip-path: polygon(50% 2%, 93% 26%, 93% 76%, 50% 100%, 6% 76%, 6% 26%);
+    background: rgb(216 246 243);
+    border-radius: 30px;
+    border: 1px solid;
+    height: 19em;
+    padding: 1em;
+    text-align: center;
+}
+
+.card_body img {
+    height: 7.5em;
+    width: 12.5em;
+    position: relative;
+    top: 25px;
+    border-radius: 13px;
+    object-fit: contain;
+    padding: 4px;
+}
+
+.card_body h4.category_name {
+    font-size: 14px;
+    color: rgb(255 255 255);
+    font-weight: 700;
+    background: rgb(0 154 139);
+    display: block;
+    width: 88%;
+    padding: 7px;
+    position: absolute;
+    bottom: 59px;
+}
+
+.discount h5 {
+    font-size: 20px;
+    text-transform: capitalize;
+    background: rgb(154 91 255);
+    display: block;
+    width: 100%;
+    position: absolute;
+    color: rgb(255 255 255);
+    height: 4em;
+    left: 0;
+    padding-top: 8px;
+    text-align: center;
+    bottom: -21px;
+}
+
+.discount h5 span.upto {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.discount h5 span.number {
+    font-size: 26px;
+    text-shadow: 1px 0px 1px #d4d4d4;
+    font-weight: bold;
+}
+
+.discount h5 span.percent {
+    font-size: 14px;
+    position: relative;
+    top: -6px;
+    left: 2px;
+    font-weight: 700;
+}
+
+span.rolShape1 {
+    background: #6dc8bebf;
+    height: 5px;
+    width: 68px;
+    position: absolute;
+    bottom: 19px;
+    left: 21px;
+    border-radius: 50px;
+    transform: rotate(27deg);
+}
+
+span.rolShape2 {
+    background: #fd8632a6;
+    height: 4px;
+    width: 41px;
+    position: absolute;
+    bottom: 5px;
+    left: 77px;
+    border-radius: 50px;
+    transform: rotate(27deg);
+}
+
+span.rolShape3 {
+    background: #007f3d87;
+    height: 5px;
+    width: 55px;
+    position: absolute;
+    bottom: 36px;
+    left: 26px;
+    border-radius: 50px;
+    transform: rotate(27deg);
+}
+
+.bg-percentage1 {
+    background: #9a5bff !important;
+}
+
+.bg-discount1 {
+    background: #9a5bff !important;
+}
+
+.bg-percentage2 {
+    background: #ff9802 !important;
+}
+
+.bg-discount2 {
+    background: #ff9802 !important;
+}
+
+.bg-percentage3 {
+    background: #30cd96 !important;
+}
+
+.bg-discount3 {
+    background: #30cd96 !important;
+}
+
+.bg-percentage4 {
+    background: #f0693c !important;
+}
+
+.bg-discount4 {
+    background: #f0693c !important;
+}
+
+.bg-percentage8 {
+    background: #9a5bff !important;
+}
+
+.bg-discount8 {
+    background: #9a5bff !important;
+}
+
+.bg-percentage7 {
+    background: #ff9802 !important;
+}
+
+.bg-discount7 {
+    background: #ff9802 !important;
+}
+
+.bg-percentage6 {
+    background: #30cd96 !important;
+}
+
+.bg-discount6 {
+    background: #30cd96 !important;
+}
+
+.bg-percentage5 {
+    background: #f0693c !important;
+}
+
+.bg-discount5 {
+    background: #f0693c !important;
+}
+
+.company__name {
+    background: rgb(33 33 32 / 69%);
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    top: 15em;
+    visibility: hidden;
+    opacity: 0;
+    left: 23px;
+    clip-path: polygon(50% 2%, 93% 26%, 93% 76%, 50% 100%, 6% 78%, 6% 26%);
+    padding: 4.3em 1.2em;
+    transition: 0.7s;
+}
+
+.company__name h2 {
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #4444;
+    font-size: 25px;
+    color: #2edc9f;
+}
+
+.card_body:hover .company__name {
+    top: 7px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.home-discount {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0;
+    background: rgb(224 255 252 / 37%);
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .card_body {
+        height: 13em;
+        padding: 1em;
+    }
+    span.discountShape {
+        bottom: -4px;
+        right: 16px;
+        font-size: 11px;
+        width: 7.5em;
+    }
+    span.rolShape1 {
+        height: 3px;
+        width: 63px;
+        bottom: 0px;
+        left: 19px;
+    }
+    span.rolShape2 {
+        height: 3px;
+        bottom: 0px;
+        left: 45px;
+        width: 40px;
+    }
+    span.rolShape3 {
+        height: 3px;
+        bottom: 17px;
+        left: 24px;
+        width: 50px;
+    }
+    .company__name {
+        width: 78%;
+    }
+}
+
+span.whatsnew-date {
+    color: rgb(237 28 36);
+    font-weight: 600;
+}
+
+h6.whatsnew-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(33 37 41);
+}
+
+.description.whatsnew {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Raleway';
+    text-align: justify;
+    opacity: .9;
+}
+
+.whatsnew.shape1 {
+    width: 150px;
+    height: 150px;
+    background: rgb(118 209 199 / 45%);
+    opacity: 0.6;
+    position: absolute;
+    top: -80px;
+    left: 86%;
+    border-radius: 50%;
+    -webkit-transform: rotate( 45deg);
+    transform: rotate( 45deg);
+}
+
+.card.card-body.whatsnew-card {
+        height: 100%;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
+    border: 1px solid #afafaf44;
+}
+
+img.img-fluid.whatsnew-image {
+    width: 150px;
+    height: 150px;
+    background: rgb(101 199 188 / 56%);
+    opacity: 0.6;
+    position: absolute;
+    top: 180px;
+    left: 80%;
+    border-radius: 50%;
+    -webkit-transform: rotate( 45deg);
+    transform: rotate( 45deg);
+}
+
+img.whatsnew-image {
+    width: 100%;
+    height: 9em;
+    object-fit: cover;
+    box-shadow: -3px -3px 0px 3px #7bcdc4;
+    border-radius: 30px 0px;
+}
+
+/*# sourceMappingURL=card_style.css.map */
+
+
+/*Feedback Popup*/
+
+.feedback {
+    background: #31485d9c;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 1234;
+    padding-top: 4em;
+}
+
+.feedback-card {
+    background: #fff;
+    padding: 2em;
+    width: 34em;
+    margin: 0 auto;
+    box-shadow: 0px 0px 8px 4px #6b6b6b44;
+}
+
+.feedback-card h3.title {
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.feedback-card .incentive-icon img {
+    height: 6em;
+    margin: 0 auto;
+}
+
+.feedback-card h5.text {
+    font-size: 19px;
+    opacity: .8;
+    font-weight: 400;
+    font-family: 'Roboto'
+}
+
+.rating ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rating ul li {
+    text-align: center;
+    width: 5em;
+}
+
+.rating ul li i {
+    font-size: 38px;
+    color: #5fc7b7;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.rating ul li i:hover {
+    font-weight: bold;
+}
+
+.rating ul li label span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.comment textarea {
+    border: 1px solid #6fbfb6;
+}
+
+.footer-button {
+    padding: 1em 0em;
+}
+
+.footer-button button {
+    background: #5fc7b7;
+    padding: 6px 23px;
+    border-color: #5fc7b7;
+    color: white;
+    border-radius: 12px;
+}
+
+.footer-button a {
+    text-decoration: underline;
+    margin-top: 5px;
+}
+
+
+/*suspended*/
+
+.suspended {
+    background: #1c2f2f7a;
+    height: 100%;
+    width: 69%;
+    display: block;
+    z-index: 123;
+    position: relative;
+}
+
+.suspended img {
+    width: 52em;
+}
+
+.item-image {
+    width: 4em;
+    height: 4em;
+    display: block;
+    float: left;
+    margin-right: 4px;
+}
+
+.video-icon i {
+    font-size: 6em;
+    color: rgb(255 0 0);
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}

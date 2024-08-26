@@ -1,0 +1,108 @@
+.become_member_container {
+  width: 750px;
+  margin: 0 auto;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.become_member_content {
+  text-align: center;
+  padding: 50px 0px 30px 0px;
+}
+.become_member_content h3 {
+  font-size: 30px;
+  font-weight: 200;
+}
+.become_member_content h5 {
+  font-size: 20px;
+  font-weight: 200;
+}
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.company_name {
+  width: 60%;
+  margin-bottom: 20px;
+}
+.company_name > input {
+  display: block;
+  width: 75%;
+  padding-left: 10px;
+}
+
+.company_others {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.company_others span {
+  color: red;
+}
+.company_others > div {
+  width: 60%;
+  margin-bottom: 20px;
+}
+.company_others input {
+  width: 150%;
+  padding-left: 10px;
+}
+.check_box {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.check_box input {
+  margin-right: 5px;
+}
+.check_box span {
+  color: #6dc8be;
+}
+.form_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form_btn_right {
+  display: flex;
+  align-items: center;
+}
+.form_btn_right span {
+  margin-right: 10px;
+}
+.submit_btn {
+  background-color: #6dc8be;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: #f4f4f4;
+  font-weight: 500;
+}
+.login_btn {
+  background-color: red;
+  padding: 5px 20px;
+  border-radius: 40px;
+  color: #f4f4f4;
+  font-weight: 500;
+}
+
+/* responsive design start */
+
+@media screen and (max-width: 576px) {
+  .become_member_container {
+    width: 100%;
+  }
+  .company_name > input {
+    width: 148%;
+  }
+  .company_others {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .form_btn {
+    flex-direction: column;
+  }
+  .form_btn_right{
+    flex-direction: column;
+  }
+  .form_btn_right span{
+    margin: 10px 0px;
+  }
+}

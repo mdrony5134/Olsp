@@ -1,0 +1,120 @@
+.member_login_container {
+  /* border: 1px solid burlywood; */
+  height: 475px;
+  width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  border-radius: 10px;
+  display: flex;
+  /* background-color: rgba(109, 200, 190, .6); */
+}
+.col_left {
+  width: 40%;
+}
+.col_right {
+  width: 60%;
+}
+
+.login_text {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.login_text img {
+  width: 90%;
+  padding: 20px;
+}
+.login_body {
+  height: 475px;
+  /* display: inline-block; */
+  background-color: rgba(109, 200, 190, 0.6);
+}
+.right_side_container {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.right_side_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.right_side_content .login_box {
+  display: flex;
+  width: 90%;
+  /* position: relative; */
+}
+.login_box input {
+  width: 90%;
+  padding-left: 10px;
+}
+
+.right_side_content .login_header {
+  width: 320px;
+  text-align: center;
+}
+.login_header h2 {
+  font-size: 20px;
+  font-weight: 200;
+}
+.login_header img {
+  width: 25%;
+}
+
+.forget_btn {
+  color: #007f3d;
+  text-align: center;
+  border: 2px solid #007f3d;
+  padding: 5px 20px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+.forget_btn:hover {
+  background-color: #6dc8be;
+  border: 2px solid #6dc8be;
+  color: #fff;
+}
+.next_btn {
+  background-color: #007f3d;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: #f4f4f4;
+  margin-top: 30px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.next_btn:hover {
+  background-color: #6dc8be;
+  color: #f4f4f4;
+  box-shadow: none;
+}
+
+/* responsive */
+@media screen and (max-width: 576px) {
+  /* .col_left {
+    display: none;
+  } */
+
+  /* .row{
+    flex-direction: column;
+  } */
+   .member_login_container{
+    /* flex-direction: column-reverse; */
+   }
+  .member_login_container {
+    width: 100%;
+  }
+  .login_box {
+    width: 100%;
+  }
+  .login_box input {
+    width: 100%;
+  }
+  .forget_btn {
+    padding: 5px 40px;
+  }
+}

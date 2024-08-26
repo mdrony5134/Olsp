@@ -1,0 +1,1029 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Member Panel | Olspab</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- All css here -->
+
+    <link rel="stylesheet" href="css/card_style.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sstyle.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/frontend_app.css">
+    <link rel="stylesheet" href="css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/common-style.css"> -->
+    <style type="text/css">
+        .rtl {
+            direction: rtl;
+        }
+
+        .vdp-datepicker {
+            position: relative;
+            text-align: left;
+        }
+
+        .vdp-datepicker * {
+            box-sizing: border-box;
+        }
+
+        .vdp-datepicker__calendar {
+            position: absolute;
+            z-index: 100;
+            background: #fff;
+            width: 300px;
+            border: 1px solid #ccc;
+        }
+
+        .vdp-datepicker__calendar header {
+            display: block;
+            line-height: 40px;
+        }
+
+        .vdp-datepicker__calendar header span {
+            display: inline-block;
+            text-align: center;
+            width: 71.42857142857143%;
+            float: left;
+        }
+
+        .vdp-datepicker__calendar header .prev,
+        .vdp-datepicker__calendar header .next {
+            width: 14.285714285714286%;
+            float: left;
+            text-indent: -10000px;
+            position: relative;
+        }
+
+        .vdp-datepicker__calendar header .prev:after,
+        .vdp-datepicker__calendar header .next:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border: 6px solid transparent;
+        }
+
+        .vdp-datepicker__calendar header .prev:after {
+            border-right: 10px solid #000;
+            margin-left: -5px;
+        }
+
+        .vdp-datepicker__calendar header .prev.disabled:after {
+            border-right: 10px solid #ddd;
+        }
+
+        .vdp-datepicker__calendar header .next:after {
+            border-left: 10px solid #000;
+            margin-left: 5px;
+        }
+
+        .vdp-datepicker__calendar header .next.disabled:after {
+            border-left: 10px solid #ddd;
+        }
+
+        .vdp-datepicker__calendar header .prev:not(.disabled),
+        .vdp-datepicker__calendar header .next:not(.disabled),
+        .vdp-datepicker__calendar header .up:not(.disabled) {
+            cursor: pointer;
+        }
+
+        .vdp-datepicker__calendar header .prev:not(.disabled):hover,
+        .vdp-datepicker__calendar header .next:not(.disabled):hover,
+        .vdp-datepicker__calendar header .up:not(.disabled):hover {
+            background: #eee;
+        }
+
+        .vdp-datepicker__calendar .disabled {
+            color: #ddd;
+            cursor: default;
+        }
+
+        .vdp-datepicker__calendar .flex-rtl {
+            display: flex;
+            width: inherit;
+            flex-wrap: wrap;
+        }
+
+        .vdp-datepicker__calendar .cell {
+            display: inline-block;
+            padding: 0 5px;
+            width: 14.285714285714286%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid transparent;
+        }
+
+        .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day,
+        .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month,
+        .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year {
+            cursor: pointer;
+        }
+
+        .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover,
+        .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover,
+        .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover {
+            border: 1px solid #4bd;
+        }
+
+        .vdp-datepicker__calendar .cell.selected {
+            background: #4bd;
+        }
+
+        .vdp-datepicker__calendar .cell.selected:hover {
+            background: #4bd;
+        }
+
+        .vdp-datepicker__calendar .cell.selected.highlighted {
+            background: #4bd;
+        }
+
+        .vdp-datepicker__calendar .cell.highlighted {
+            background: #cae5ed;
+        }
+
+        .vdp-datepicker__calendar .cell.highlighted.disabled {
+            color: #a3a3a3;
+        }
+
+        .vdp-datepicker__calendar .cell.grey {
+            color: #888;
+        }
+
+        .vdp-datepicker__calendar .cell.grey:hover {
+            background: inherit;
+        }
+
+        .vdp-datepicker__calendar .cell.day-header {
+            font-size: 75%;
+            white-space: nowrap;
+            cursor: inherit;
+        }
+
+        .vdp-datepicker__calendar .cell.day-header:hover {
+            background: inherit;
+        }
+
+        .vdp-datepicker__calendar .month,
+        .vdp-datepicker__calendar .year {
+            width: 33.333%;
+        }
+
+        .vdp-datepicker__clear-button,
+        .vdp-datepicker__calendar-button {
+            cursor: pointer;
+            font-style: normal;
+        }
+
+        .vdp-datepicker__clear-button.disabled,
+        .vdp-datepicker__calendar-button.disabled {
+            color: #999;
+            cursor: default;
+        }
+
+        /*# sourceURL=Datepicker.vue */
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkRhdGVwaWNrZXIudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBYztBQUNoQjtBQUNBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0Usc0JBQXNCO0FBQ3hCO0FBQ0E7RUFDRSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osc0JBQXNCO0FBQ3hCO0FBQ0E7RUFDRSxjQUFjO0VBQ2QsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLHlCQUF5QjtFQUN6QixXQUFXO0FBQ2I7QUFDQTs7RUFFRSwwQkFBMEI7RUFDMUIsV0FBVztFQUNYLHFCQUFxQjtFQUNyQixrQkFBa0I7QUFDcEI7QUFDQTs7RUFFRSxXQUFXO0VBQ1gsa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxRQUFRO0VBQ1IsNENBQTRDO0VBQzVDLDZCQUE2QjtBQUMvQjtBQUNBO0VBQ0UsNkJBQTZCO0VBQzdCLGlCQUFpQjtBQUNuQjtBQUNBO0VBQ0UsNkJBQTZCO0FBQy9CO0FBQ0E7RUFDRSw0QkFBNEI7RUFDNUIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSw0QkFBNEI7QUFDOUI7QUFDQTs7O0VBR0UsZUFBZTtBQUNqQjtBQUNBOzs7RUFHRSxnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLFdBQVc7RUFDWCxlQUFlO0FBQ2pCO0FBQ0E7RUFDRSxhQUFhO0VBQ2IsY0FBYztFQUNkLGVBQWU7QUFDakI7QUFDQTtFQUNFLHFCQUFxQjtFQUNyQixjQUFjO0VBQ2QsMEJBQTBCO0VBQzFCLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsa0JBQWtCO0VBQ2xCLHNCQUFzQjtFQUN0Qiw2QkFBNkI7QUFDL0I7QUFDQTs7O0VBR0UsZUFBZTtBQUNqQjtBQUNBOzs7RUFHRSxzQkFBc0I7QUFDeEI7QUFDQTtFQUNFLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLG1CQUFtQjtBQUNyQjtBQUNBO0VBQ0UsY0FBYztBQUNoQjtBQUNBO0VBQ0UsV0FBVztBQUNiO0FBQ0E7RUFDRSxtQkFBbUI7QUFDckI7QUFDQTtFQUNFLGNBQWM7RUFDZCxtQkFBbUI7RUFDbkIsZUFBZTtBQUNqQjtBQUNBO0VBQ0UsbUJBQW1CO0FBQ3JCO0FBQ0E7O0VBRUUsY0FBYztBQUNoQjtBQUNBOztFQUVFLGVBQWU7RUFDZixrQkFBa0I7QUFDcEI7QUFDQTs7RUFFRSxXQUFXO0VBQ1gsZUFBZTtBQUNqQiIsImZpbGUiOiJEYXRlcGlja2VyLnZ1ZSIsInNvdXJjZXNDb250ZW50IjpbIi5ydGwge1xuICBkaXJlY3Rpb246IHJ0bDtcbn1cbi52ZHAtZGF0ZXBpY2tlciB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbn1cbi52ZHAtZGF0ZXBpY2tlciAqIHtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHotaW5kZXg6IDEwMDtcbiAgYmFja2dyb3VuZDogI2ZmZjtcbiAgd2lkdGg6IDMwMHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIge1xuICBkaXNwbGF5OiBibG9jaztcbiAgbGluZS1oZWlnaHQ6IDQwcHg7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciBzcGFuIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHdpZHRoOiA3MS40Mjg1NzE0Mjg1NzE0MyU7XG4gIGZsb2F0OiBsZWZ0O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLnByZXYsXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAubmV4dCB7XG4gIHdpZHRoOiAxNC4yODU3MTQyODU3MTQyODYlO1xuICBmbG9hdDogbGVmdDtcbiAgdGV4dC1pbmRlbnQ6IC0xMDAwMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAucHJldjphZnRlcixcbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgaGVhZGVyIC5uZXh0OmFmdGVyIHtcbiAgY29udGVudDogJyc7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgbGVmdDogNTAlO1xuICB0b3A6IDUwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpIHRyYW5zbGF0ZVkoLTUwJSk7XG4gIGJvcmRlcjogNnB4IHNvbGlkIHRyYW5zcGFyZW50O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLnByZXY6YWZ0ZXIge1xuICBib3JkZXItcmlnaHQ6IDEwcHggc29saWQgIzAwMDtcbiAgbWFyZ2luLWxlZnQ6IC01cHg7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAucHJldi5kaXNhYmxlZDphZnRlciB7XG4gIGJvcmRlci1yaWdodDogMTBweCBzb2xpZCAjZGRkO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLm5leHQ6YWZ0ZXIge1xuICBib3JkZXItbGVmdDogMTBweCBzb2xpZCAjMDAwO1xuICBtYXJnaW4tbGVmdDogNXB4O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLm5leHQuZGlzYWJsZWQ6YWZ0ZXIge1xuICBib3JkZXItbGVmdDogMTBweCBzb2xpZCAjZGRkO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLnByZXY6bm90KC5kaXNhYmxlZCksXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAubmV4dDpub3QoLmRpc2FibGVkKSxcbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgaGVhZGVyIC51cDpub3QoLmRpc2FibGVkKSB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgaGVhZGVyIC5wcmV2Om5vdCguZGlzYWJsZWQpOmhvdmVyLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLm5leHQ6bm90KC5kaXNhYmxlZCk6aG92ZXIsXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAudXA6bm90KC5kaXNhYmxlZCk6aG92ZXIge1xuICBiYWNrZ3JvdW5kOiAjZWVlO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuZGlzYWJsZWQge1xuICBjb2xvcjogI2RkZDtcbiAgY3Vyc29yOiBkZWZhdWx0O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuZmxleC1ydGwge1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogaW5oZXJpdDtcbiAgZmxleC13cmFwOiB3cmFwO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbCB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcGFkZGluZzogMCA1cHg7XG4gIHdpZHRoOiAxNC4yODU3MTQyODU3MTQyODYlO1xuICBoZWlnaHQ6IDQwcHg7XG4gIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHRyYW5zcGFyZW50O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbDpub3QoLmJsYW5rKTpub3QoLmRpc2FibGVkKS5kYXksXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5jZWxsOm5vdCguYmxhbmspOm5vdCguZGlzYWJsZWQpLm1vbnRoLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbDpub3QoLmJsYW5rKTpub3QoLmRpc2FibGVkKS55ZWFyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbDpub3QoLmJsYW5rKTpub3QoLmRpc2FibGVkKS5kYXk6aG92ZXIsXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5jZWxsOm5vdCguYmxhbmspOm5vdCguZGlzYWJsZWQpLm1vbnRoOmhvdmVyLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbDpub3QoLmJsYW5rKTpub3QoLmRpc2FibGVkKS55ZWFyOmhvdmVyIHtcbiAgYm9yZGVyOiAxcHggc29saWQgIzRiZDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgLmNlbGwuc2VsZWN0ZWQge1xuICBiYWNrZ3JvdW5kOiAjNGJkO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbC5zZWxlY3RlZDpob3ZlciB7XG4gIGJhY2tncm91bmQ6ICM0YmQ7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5jZWxsLnNlbGVjdGVkLmhpZ2hsaWdodGVkIHtcbiAgYmFja2dyb3VuZDogIzRiZDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgLmNlbGwuaGlnaGxpZ2h0ZWQge1xuICBiYWNrZ3JvdW5kOiAjY2FlNWVkO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbC5oaWdobGlnaHRlZC5kaXNhYmxlZCB7XG4gIGNvbG9yOiAjYTNhM2EzO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbC5ncmV5IHtcbiAgY29sb3I6ICM4ODg7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5jZWxsLmdyZXk6aG92ZXIge1xuICBiYWNrZ3JvdW5kOiBpbmhlcml0O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbC5kYXktaGVhZGVyIHtcbiAgZm9udC1zaXplOiA3NSU7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIGN1cnNvcjogaW5oZXJpdDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgLmNlbGwuZGF5LWhlYWRlcjpob3ZlciB7XG4gIGJhY2tncm91bmQ6IGluaGVyaXQ7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5tb250aCxcbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgLnllYXIge1xuICB3aWR0aDogMzMuMzMzJTtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2xlYXItYnV0dG9uLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhci1idXR0b24ge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2xlYXItYnV0dG9uLmRpc2FibGVkLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhci1idXR0b24uZGlzYWJsZWQge1xuICBjb2xvcjogIzk5OTtcbiAgY3Vyc29yOiBkZWZhdWx0O1xufVxuIl19 */
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+    <!-- Add your site or application content here -->
+
+    <header class="main-header">
+        <div class="">
+            <!-- <div class="main-header-wapper"> -->
+            <!-- <div class="site-logo">
+              <a href="index.html"
+                ><img src="assets/img/logo.png" alt="Logo"
+              /></a>
+            </div> -->
+            <div class="main-header-info">
+                <div class="top-header">
+                    <ul class="top-left">
+                        <li>
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <a href="./memberLogin.html">Membership</a>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-envelope-open"></i>
+                            <a href="./becomeMember.html">Become A Member</a>
+                        </li>
+                    </ul>
+                    <div class="top-right">
+                        <ul class="top-header-nav">
+                            <li><a href="">B2B</a></li>
+                            <li><a href="">Digital Shop</a></li>
+                        </ul>
+                        <ul class="header-social-share">
+                            <li>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.top-header-->
+                <div class="header-menu-wrap container">
+                    <div class="site-logo">
+                        <a href="index.html"><img src="../assets/img/logo.png" alt="Logo"></a>
+                    </div>
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="./index.html">Home</a>
+                            <!-- <ul>
+                                      <li><a href="">dropdown_menu</a></li>
+                                      <li><a href="">dropdown_menu</a></li>
+                                  </ul> -->
+                        </li>
+                        <li>
+                            <a href="./about.html">About Us</a>
+                            <!-- <ul>
+                                      <li><a href="">dropdown_menu</a></li>
+                                      <li><a href="">dropdown_menu</a></li>
+                                      <li><a href="">dropdown_menu</a></li>
+                                      <li><a href="">dropdown_menu</a></li>
+                                  </ul> -->
+                        </li>
+
+                        <li>
+                            <a href="">Membership <i class="fa-solid fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="./memberList.html">Member List</a></li>
+                                <li><a href="./memberService.html">Member Services</a></li>
+                                <li>
+                                    <a href="./nonMemberService.html">Non-member Services</a>
+                                </li>
+                                <li>
+                                    <a href="./membershipProcess.html">Membership Process</a>
+                                </li>
+                                <li><a href="./codeOfProduct.html">Code of Product</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Media Center <i class="fa-solid fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="./news.html">News</a></li>
+                                <li><a href="./photoGallary.html">Photo Gallery</a></li>
+                                <li><a href="./videoGallery.html">Video Gallery</a></li>
+                                <li><a href="./IndustryNews.html">Industry News</a></li>
+                                <li><a href="./presskit.html">Press Kit</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Resources <i class="fa-solid fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="./publications.html">Publication</a></li>
+                                <li>
+                                    <a href="./aboutbditsector.html">About Bangladesh ICT Sector</a>
+                                </li>
+                                <li><a href="./basisMagagine.html">BASIS magazine</a></li>
+                                <li><a href="./circulars.html">Circular</a></li>
+                                <li><a href="./gazette.html">Gazettes</a></li>
+                                <li><a href="./annualReports.html">Annual Reports</a></li>
+                                <li>
+                                    <a href="./policyActAndLaw.html">Policies, Acts & Laws</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Awards <i class="fa-solid fa-angle-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="./basisLunaShamsuddohaAward2023.html">BASIS Luna Shamsuddoha Award 2023</a>
+                                </li>
+                                <li>
+                                    <a href="./basisNationalICTAwards.html">BASIS National ICT Awards</a>
+                                </li>
+                                <li><a href="./apicta.html">APICTA</a></li>
+                                <li>
+                                    <a href="./nasaSpaceAppsChallenge.html">NASA Space Apps Challenge</a>
+                                </li>
+                                <li>
+                                    <a href="./basisOutsourcingAward.html">BASIS Outsourcing Award</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Events <i class="fa-solid fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="./basisJapanDay.html">BASIS Japan Day</a></li>
+                                <li>
+                                    <a href="./digitalworld2020.html">DIGITAL WORLD 2020</a>
+                                </li>
+                                <li><a href="./cebitThiland.html">CeBIT Thailand</a></li>
+                                <li><a href="./japanItWeek.html">Japan IT Week</a></li>
+                                <li><a href="./gitex.html">GITEX</a></li>
+                                <li><a href="./basisSoftExpo.html">BASIS SOFTEXPO</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Initiatives <i class="fa-solid fa-angle-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="./basisNationalICTAwards.html">BASIS National ICT Awards</a>
+                                </li>
+                                <li>
+                                    <a href="./basisStudentsForum.html">BASIS Students' Forum</a>
+                                </li>
+                                <li><a href="./seip.html">SEIP</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                    <div class="menu-right-item">
+                        <!-- <div class="menu-action-btn dl-search-icon">
+                                  <i class="las la-search"></i>
+                              </div> -->
+
+                        <div class="mobile-menu-icon">
+                            <div class="burger-menu">
+                                <div class="line-menu line-half first-line"></div>
+                                <div class="line-menu"></div>
+                                <div class="line-menu line-half last-line"></div>
+                            </div>
+                        </div>
+                        <!-- <a href="" class="default-btn d-none d-lg-block d-md-block">Get Solution</a> -->
+                    </div>
+                </div>
+                <!--/.header-menu-wrap-->
+            </div>
+        </div>
+        </div>
+    </header>
+    <!--/.main-header-->
+
+    <div id="popup-search-box">
+        <div class="box-inner-wrap d-flex align-items-center">
+            <form id="form" action="#" method="get" role="search">
+                <input id="popup-search" type="text" name="s" placeholder="Type keywords here..." />
+                <button id="popup-search-button" type="submit" name="submit">
+                    <i class="las la-search"></i>
+                </button>
+            </form>
+            <div class="search-close"><i class="las la-times"></i></div>
+        </div>
+    </div>
+    <!--/.popupsearch-box-->
+    <div id="searchbox-overlay"></div>
+    <!-- header start -->
+    <main data-v-6f04a53f="" class="main"><!---->
+        <main data-v-6f04a53f="" class="main">
+            <div class="company-dashboard py-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-12">
+                            <div>
+                                <div class="card sidebar shadow-sm mb-3">
+                                    <div class="card-header">
+                                        <div class="text-center"><!----></div>
+                                        <div class="user"><sup class="badge rounded-50 mt-2 badge-success">85%
+                                                Completed</sup> <img
+                                                src="https://basis.org.bd/public/images/logo/2164c8adc088f86f87ef69586a90c73304042023045655.png"
+                                                class="memLogo" alt="logo">
+                                            <div class="userName py-3">
+                                                <h2 class="text-uppercase">
+                                                    Dakatiya
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card sidemenu shadow-sm mb-3">
+                                    <div class="card-body p-0">
+                                        <nav class="navbar navbar-expand-lg p-0"><button type="button"
+                                                data-toggle="collapse" data-target="#dashMenu" aria-controls="dashMenu"
+                                                aria-expanded="false" aria-label="Toggle navigation"
+                                                class="navbar-toggler m-2"><span class="fas fa-bars pr-1"></span>
+                                                Profile Menu
+                                            </button>
+                                            <div id="dashMenu" class="collapse navbar-collapse">
+                                                <ul class="nav flex-column w-100">
+                                                    <li class="nav-item">
+                                                        <a href="/member/dashboard"
+                                                            class="nav-link active router-link-active"
+                                                            aria-current="page">
+                                                            <i class="fa-solid fa-angles-right"></i> Dashboard</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="/member/edit-company-info" class="nav-link">
+                                                            <i class="fa-solid fa-angles-right"></i>
+                                                            Company Information
+                                                            <sup class="badge rounded-50 badge-success">95%</sup></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="/memberPanel/representativeInfo.html" class="nav-link">
+                                                            <i class="fa-solid fa-angles-right"></i>
+                                                            Representative Information
+                                                            <sup class="badge rounded-50 badge-success">100%</sup>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item"><a href="/member/business-activity-info"
+                                                            class="nav-link">
+                                                            <i class="fa-solid fa-angles-right"></i>
+                                                            Business Activity Information
+                                                            <sup class="badge rounded-50 badge-success">100%</sup></a>
+                                                    </li>
+                                                    <li class="nav-item"><a href="/member/vertical-experience-info"
+                                                            class="nav-link">
+                                                            <i class="fa-solid fa-angles-right"></i>
+                                                            Vertical Experience Information
+                                                            <sup class="badge rounded-50 badge-success">100%</sup></a>
+                                                    </li>
+                                                    <li class="nav-item"><a href="/member/products-services"
+                                                            class="nav-link">
+                                                            <i class="fa-solid fa-angles-right"></i>
+                                                            Products &amp; Services Information
+                                                            <sup class="badge rounded-50 badge-success">100%</sup></a>
+                                                    </li>
+                                                    <li class="nav-item"><a href="/member/compliance-information"
+                                                            class="nav-link">
+                                                            <i class="fa-solid fa-angles-right"></i>
+                                                            Compliance Information
+                                                            <sup class="badge rounded-50 badge-danger">0%</sup></a></li>
+                                                    <li class="nav-item"><a href="/member/upload-photos-files"
+                                                            class="nav-link">
+                                                            <i class="fa-solid fa-angles-right"></i>
+                                                            Upload Photos &amp; Files
+                                                            <sup class="badge rounded-50 badge-success">100%</sup></a>
+                                                    </li>
+                                                    <li class="nav-item"><a href="/member/changeRequest/create"
+                                                            class="nav-link">
+                                                            <i class="fa-solid fa-angles-right"></i>
+                                                            Change
+                                                            Request</a></li>
+                                                    <li class="nav-item"><a href="/member/payment-history"
+                                                            class="nav-link"> <i class="fa-solid fa-angles-right"></i>
+                                                            Payment History</a>
+                                                    </li> <!---->
+                                                    <li class="nav-item"><a href="/member/online-helpdesk"
+                                                            class="nav-link">
+                                                            <i class="fa-solid fa-angles-right"></i>
+                                                            Online Helpdesk
+                                                            <sup class="badge badge-danger rounded-50">
+                                                                0
+                                                            </sup></a></li>
+                                                    <li class="nav-item"><a href="/member/settings" class="nav-link"> <i
+                                                                class="fa-solid fa-angles-right"></i> Social Links</a>
+                                                    </li>
+                                                    <li class="nav-item"><a href="/member/change-password"
+                                                            class="nav-link"> <i class="fa-solid fa-angles-right"></i>
+                                                            Change Password</a>
+                                                    </li>
+                                                    <li class="nav-item"> <a class="nav-link"
+                                                            style="cursor: pointer;"><i
+                                                                class="fa-solid fa-angles-right"></i>Logout</a></li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-xs-12 position-relative"><!----> <!---->
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="card shadow-sm">
+                                        <div class="card-header bg-transparent border-0">
+                                            <h4 class="text-center">Application Form for SCB ERQ Account for Company
+                                            </h4>
+                                            <p class="font-size-md text-center desc-m">
+                                                Professionals involved in outsourced service exports, will be
+                                                offered from Standard Chartered a bundle offer of a Taka Savings
+                                                Account and an US Dollar ERQ (Exporter Retention Quota) account.
+                                                Individuals, firms, and professionals involved in service exports in
+                                                non-physical from such as outsourcing, BPO, business services,
+                                                professional, research and advisory services etc.
+                                            </p>
+                                        </div>
+                                        <div class="card-body"><!---->
+                                            <form><input type="hidden" value="16">
+                                                <div class="form-row">
+                                                    <div class="col-md-12 mb-3"><label for="name_organization">
+                                                            Name of the Company
+                                                            <span class="text-danger requierd-star"></span></label>
+                                                        <input type="text" id="name_organization"
+                                                            placeholder="e.g. Nogor" onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'e.g. Nogor'"
+                                                            class="form-control shadow-none is-valid">
+                                                        <!---->
+                                                        <div class="invalid-feedback"></div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="mailing_address">
+                                                            Mailing Address of the Applicant Company
+                                                            <span class="text-danger requierd-star"></span></label>
+                                                        <textarea rows="5" placeholder="e.g. 221b, Baker Street, London"
+                                                            onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'e.g. 221b, Baker Street, London'"
+                                                            class="form-control shadow-none is-valid"></textarea>
+                                                        <div class="invalid-feedback"></div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="permanent_address">
+                                                            Permanent address of the Applicant Company
+                                                        </label> <textarea rows="5"
+                                                            placeholder="e.g. 221b, Baker Street, London"
+                                                            onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'e.g. 221b, Baker Street, London'"
+                                                            class="form-control shadow-none is-valid"></textarea>
+                                                        <div class="invalid-feedback"></div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="y_o_establishment">
+                                                            Year of Establishment
+                                                            <span class="text-danger requierd-star"></span></label>
+                                                        <div class="input-group">
+                                                            <div class="vdp-datepicker form-control shadow-none"
+                                                                onfocus="this.placeholder = ''"
+                                                                onblur="this.placeholder = 'e.g. 12-12-2022'">
+                                                                <div class=""><!----> <input type="text"
+                                                                        id="year_of_establishment"
+                                                                        placeholder="e.g. 12-12-2022."
+                                                                        readonly="readonly" autocomplete="off">
+                                                                    <!---->
+                                                                </div>
+                                                                <div class="vdp-datepicker__calendar"
+                                                                    style="display: none;">
+                                                                    <header><span class="prev">&lt;</span> <span
+                                                                            class="day__month_btn up">Aug
+                                                                            2024</span> <span class="next">&gt;</span>
+                                                                    </header>
+                                                                    <div class=""><span
+                                                                            class="cell day-header">Sun</span><span
+                                                                            class="cell day-header">Mon</span><span
+                                                                            class="cell day-header">Tue</span><span
+                                                                            class="cell day-header">Wed</span><span
+                                                                            class="cell day-header">Thu</span><span
+                                                                            class="cell day-header">Fri</span><span
+                                                                            class="cell day-header">Sat</span> <span
+                                                                            class="cell day blank"></span><span
+                                                                            class="cell day blank"></span><span
+                                                                            class="cell day blank"></span><span
+                                                                            class="cell day blank"></span><span
+                                                                            class="cell day">1</span><span
+                                                                            class="cell day">2</span><span
+                                                                            class="cell day weekend sat">3</span><span
+                                                                            class="cell day weekend sun">4</span><span
+                                                                            class="cell day">5</span><span
+                                                                            class="cell day">6</span><span
+                                                                            class="cell day">7</span><span
+                                                                            class="cell day">8</span><span
+                                                                            class="cell day">9</span><span
+                                                                            class="cell day weekend sat">10</span><span
+                                                                            class="cell day today weekend sun">11</span><span
+                                                                            class="cell day">12</span><span
+                                                                            class="cell day">13</span><span
+                                                                            class="cell day">14</span><span
+                                                                            class="cell day">15</span><span
+                                                                            class="cell day">16</span><span
+                                                                            class="cell day weekend sat">17</span><span
+                                                                            class="cell day weekend sun">18</span><span
+                                                                            class="cell day">19</span><span
+                                                                            class="cell day">20</span><span
+                                                                            class="cell day">21</span><span
+                                                                            class="cell day">22</span><span
+                                                                            class="cell day">23</span><span
+                                                                            class="cell day weekend sat">24</span><span
+                                                                            class="cell day weekend sun">25</span><span
+                                                                            class="cell day">26</span><span
+                                                                            class="cell day">27</span><span
+                                                                            class="cell day">28</span><span
+                                                                            class="cell day">29</span><span
+                                                                            class="cell day">30</span><span
+                                                                            class="cell day weekend sat">31</span></div>
+                                                                </div>
+                                                                <div class="vdp-datepicker__calendar"
+                                                                    style="display: none;">
+                                                                    <header><span class="prev">&lt;</span> <span
+                                                                            class="month__year_btn up">2024</span> <span
+                                                                            class="next">&gt;</span></header> <span
+                                                                        class="cell month">January</span><span
+                                                                        class="cell month">February</span><span
+                                                                        class="cell month">March</span><span
+                                                                        class="cell month">April</span><span
+                                                                        class="cell month">May</span><span
+                                                                        class="cell month">June</span><span
+                                                                        class="cell month">July</span><span
+                                                                        class="cell month">August</span><span
+                                                                        class="cell month">September</span><span
+                                                                        class="cell month">October</span><span
+                                                                        class="cell month">November</span><span
+                                                                        class="cell month">December</span>
+                                                                </div>
+                                                                <div class="vdp-datepicker__calendar"
+                                                                    style="display: none;">
+                                                                    <header><span class="prev">&lt;</span> <span>2020 -
+                                                                            2029</span> <span class="next">&gt;</span>
+                                                                    </header> <span class="cell year">2020</span><span
+                                                                        class="cell year">2021</span><span
+                                                                        class="cell year">2022</span><span
+                                                                        class="cell year">2023</span><span
+                                                                        class="cell year">2024</span><span
+                                                                        class="cell year">2025</span><span
+                                                                        class="cell year">2026</span><span
+                                                                        class="cell year">2027</span><span
+                                                                        class="cell year">2028</span><span
+                                                                        class="cell year">2029</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="invalid-feedback"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="noc_employees">
+                                                            Number of current employees
+                                                            <span class="text-danger requierd-star"></span></label>
+                                                        <div class="input-group"><input type="text" id="no_of_employees"
+                                                                placeholder="e.g. 15" onfocus="this.placeholder = ''"
+                                                                onblur="this.placeholder = 'e.g. 15'"
+                                                                class="form-control shadow-none">
+                                                            <div class="invalid-feedback"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="name_representative">
+                                                            Name of Representative
+                                                            <span class="text-danger requierd-star"></span></label>
+                                                        <div class="input-group"><input type="text"
+                                                                id="name_representative" placeholder="e.g. Jane Doe"
+                                                                onfocus="this.placeholder = ''"
+                                                                onblur="this.placeholder = 'e.g. Jane Doe'"
+                                                                class="form-control shadow-none is-valid">
+                                                            <div class="invalid-feedback"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="designation_representative">
+                                                            Designation of Representative
+                                                            <span class="text-danger requierd-star"></span></label>
+                                                        <div class="input-group"><input type="text"
+                                                                id="designation_representative" placeholder="e.g. CEO"
+                                                                onfocus="this.placeholder = ''"
+                                                                onblur="this.placeholder = 'e.g. CEO'"
+                                                                class="form-control shadow-none is-valid">
+                                                            <div class="invalid-feedback">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="email">
+                                                            Email Address
+                                                            <span class="text-danger requierd-star"></span></label>
+                                                        <input type="text" id="email"
+                                                            placeholder="e.g. yourname@mail.com"
+                                                            onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'e.g. yourname@mail.com'"
+                                                            class="form-control shadow-none is-valid">
+                                                        <div class="invalid-feedback"></div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="phone">
+                                                            Cell Phone
+                                                        </label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"><span
+                                                                    id="inputGroupPrepend3"
+                                                                    class="input-group-text">+88</span></div> <input
+                                                                type="text" id="phone" placeholder="e.g. 01xxxxxxxxx"
+                                                                onfocus="this.placeholder = ''"
+                                                                onblur="this.placeholder = 'e.g. 01xxxxxxxxx'"
+                                                                class="form-control shadow-none is-valid">
+                                                            <div class="invalid-feedback"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="trade_license">
+                                                            Trade License Number
+                                                            <span class="text-danger requierd-star"></span></label>
+                                                        <input type="text" id="trade_license" placeholder="e.g. 12345"
+                                                            onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'e.g. 12345'"
+                                                            class="form-control shadow-none">
+                                                        <div class="invalid-feedback"></div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="rjsc_registation">
+                                                            Registration Number (RJSC)
+                                                        </label> <input type="text" id="registration_number"
+                                                            placeholder="e.g. 12345" onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'e.g. 12345'"
+                                                            class="form-control shadow-none">
+                                                        <div class="invalid-feedback"></div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="business_sector">
+                                                            Business Sector / Expertise on
+                                                        </label> <input type="text" id="business_sector"
+                                                            placeholder="e.g. IT" onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'e.g. IT'"
+                                                            class="form-control shadow-none">
+                                                        <div class="invalid-feedback"></div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="offshore_development">
+                                                            Performing Offshore development for
+                                                        </label> <input type="text" id="offshore_development"
+                                                            placeholder="e.g. demo company"
+                                                            onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'e.g. demo company'"
+                                                            class="form-control shadow-none">
+                                                        <div class="invalid-feedback"></div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="major_countries">
+                                                            Major five exporting countries
+                                                        </label>
+                                                        <div class="row">
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="major_countries1" placeholder="1."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="major_countries2" placeholder="2."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="major_countries3" placeholder="3."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="major_countries4" placeholder="4."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="major_countries5" placeholder="5."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3"><label for="domain_outsourcing">
+                                                            Major five domain in outsourcing
+                                                        </label>
+                                                        <div class="row">
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="domain_outsourcing1" placeholder="1."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="domain_outsourcing2" placeholder="2."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="domain_outsourcing3" placeholder="3."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="domain_outsourcing4" placeholder="4."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                            <div class="col-md-12"><input type="text"
+                                                                    id="domain_outsourcing5" placeholder="5."
+                                                                    class="form-control shadow-none">
+                                                                <div class="invalid-feedback"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mb-3"><label for="is_confirm"></label>
+                                                        <div class="form-group">
+                                                            <div class="custom-control custom-checkbox"><input
+                                                                    type="checkbox" id="is_confirm"
+                                                                    class="custom-control-input" value="true"> <label
+                                                                    for="is_confirm" class="custom-control-label">
+                                                                    I confirm that the information provided above, and
+                                                                    in any
+                                                                    attachment, are correct and I understand that any
+                                                                    false
+                                                                    statement or information could result in my
+                                                                    application
+                                                                    being terminated.
+                                                                </label></div>
+                                                        </div>
+                                                        <div class="invalid-feedback"></div>
+                                                    </div>
+                                                </div> <button type="submit" class="btn btn-primary">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card shadow-sm mb-3">
+                                        <div class="card-header">
+                                            <div class="row bg-ash rounded-sm">
+                                                <div class="col-md-12 px-0">
+                                                    <div class="row m-0 header-bg">
+                                                        <h6 class="m-auto">Check List</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <p class="font-weight-bold font-size-md mt-1">For ERQ Account
+                                                        company must submit the below
+                                                        documents:</p>
+                                                    <ul class="fontsize-sm pl-3">
+                                                        <li>
+                                                            <p class="mb-0">Duly filled up form</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="mb-0">Photocopy or scanned copy of updated Trade
+                                                                License</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="mb-0">Photocopy or scanned copy of NID and
+                                                                passport of Company owner</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="mb-0">2 copies of passport size photo of Company
+                                                                owner</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="mb-0">Proof of outsource work and income</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card shadow-sm">
+                                        <div class="card-header">
+                                            <div class="row mt-4 bg-ash rounded-sm">
+                                                <div class="col-md-12 px-0">
+                                                    <div class="row m-0 header-bg">
+                                                        <h6 class="m-auto">Documentation and Instructions</h6>
+                                                    </div>
+                                                    <div class="row pl-3 m-auto">
+                                                        <p class="font-weight-bold font-size-md">
+                                                            Application Submission Mode:
+                                                            <span class="font-weight-light"></span>(you can submit the
+                                                            application through
+                                                            following process)
+                                                        </p>
+                                                        <ol class="fontsize-sm pl-3">
+                                                            <li>
+                                                                <p class="mb-0">You can submit the hard copy application
+                                                                    form along with the
+                                                                    necessary documents and payment at BASIS office.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="mb-0">
+                                                                    You can email us the form and necessary documents at
+                                                                    <strong>erq@basis.org.bd</strong>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="mb-0">
+                                                                    You can send us the form and necessary documents by
+                                                                    courier.
+                                                                    <br> <strong>Mailing Address: BDBL Bhaban, 12 Kawran
+                                                                        Bazar (5th floor-west),
+                                                                        Dhaka-1215; Contact # 01191016000</strong>
+                                                                </p>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!---->
+        </main>
+    </main>
+
+    <!-- header end -->
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row footer-area">
+                <div class="col-lg-3 col-sm-6 sm-padding">
+                    <div class="footer-widget">
+                        <a class="footer-logo" href="index.html"><img src="../assets/img/logo_white.png"
+                                alt="logo" /></a>
+                        <p>
+                            Our success in creating business solutions is due in part
+                            spacially to talented committed team.
+                        </p>
+                        <ul class="footer-social">
+                            <li>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 sm-padding">
+                    <div class="footer-widget">
+                        <h3>Important link</h3>
+                        <ul class="footer-list">
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">ICT Division, Bangladesh</a></li>
+                            <li><a href="">a2i Access to Information</a></li>
+                            <li><a href="">National Board of Revenue</a></li>
+                            <li><a href="">(NBR), Bangladesh</a></li>
+                            <li><a href="">Ministry of Commerce</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 sm-padding">
+                    <div class="footer-widget">
+                        <h3>Current Projects</h3>
+                        <ul class="footer-list">
+                            <li><a href="">SEIP</a></li>
+                            <li><a href="">ITC SheTrades</a></li>
+                            <li><a href="">PUM Netherlands</a></li>
+                            <li><a href="">BASIS Japan Desk</a></li>
+                            <li><a href="">STP-1</a></li>
+                            <li><a href="">BASIS eGov Hub</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 sm-padding">
+                    <div class="footer-widget">
+                        <h3>Location</h3>
+                        <address>
+                            BDBL Bhaban (Level 5 - West), <br />
+                            12 Kawran Bazar, <br />
+                            Dhaka -1215
+                        </address>
+                        <ul class="footer-list">
+                            <li><a href="">Phone: 16488</a></li>
+                            <li><a href="">Email: info@olspab.org.bd</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright-text">
+                © <span id="currentYear"></span> Radisson Digital Technology, All
+                Rights Reserved. Design By
+                <a href="" target="_blank">Radisson Web Team</a>
+            </div>
+        </div>
+    </footer>
+    <!--/.footer-section-->
+
+
+    <!-- All js here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/frontend_app.js"></script>
+</body>
+
+</html>

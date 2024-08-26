@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap");
+
+:root {
+  --primary-font: "Space Grotesk", sans-serif;
+  --body-font: "DM Sans", sans-serif;
+  --primary-color: #73BF43;
+  --secondary-color: #089fac;
+  --heading-color: #222429;
+  --grey-color: #808287;
+  --white-color: #ffffff;
+  --light-grey-color: #dddddd;
+  --bg-white: #ffffff;
+  --bg-dark: #508C9B;
+  --bg-grey: #f4f5f8;
+  --box-shadow: 0px 30px 60px 0px
+    rgba(
+      10.000000000000004,
+      42.999999999999964,
+      82.99999999999999,
+      0.14901960784313725
+    );
+}
+a {
+  color: var(--heading-color);
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  outline: none;
+  max-width: 100%;
+}
+
+ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

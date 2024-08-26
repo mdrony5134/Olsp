@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'construction-icons';
+  src:  url('../fonts/construction-iconse791.eot?f6oayt');
+  src:  url('../fonts/construction-iconse791.eot?f6oayt#iefix') format('embedded-opentype'),
+    url('../fonts/construction-iconse791.ttf?f6oayt') format('truetype'),
+    url('../fonts/construction-iconse791.woff?f6oayt') format('woff'),
+    url('../fonts/construction-iconse791.svg?f6oayt#construction-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.ci {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'construction-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ci-hat:before {
+  content: "\e900";
+}
+.ci-paint-brush:before {
+  content: "\e901";
+}
+.ci-stairs:before {
+  content: "\e902";
+}
+.ci-water-system:before {
+  content: "\e903";
+}
+.ci-building:before {
+  content: "\e904";
+}
+.ci-bulldozer:before {
+  content: "\e905";
+}
+.ci-caliper:before {
+  content: "\e906";
+}
+.ci-engineer-2:before {
+  content: "\e907";
+}
+.ci-excavators:before {
+  content: "\e908";
+}
+.ci-warning:before {
+  content: "\e909";
+}
+.ci-cone:before {
+  content: "\e90a";
+}
+.ci-crane-hook:before {
+  content: "\e90b";
+}
+.ci-drilling-machine:before {
+  content: "\e90c";
+}
+.ci-paint-roller:before {
+  content: "\e90d";
+}
+.ci-plan:before {
+  content: "\e90e";
+}
+.ci-shovel:before {
+  content: "\e90f";
+}
+.ci-trowel:before {
+  content: "\e910";
+}
+.ci-wheelbarrow:before {
+  content: "\e911";
+}
+.ci-wood-cutter:before {
+  content: "\e912";
+}
+.ci-bricks:before {
+  content: "\e913";
+}
+.ci-bucket:before {
+  content: "\e914";
+}
+.ci-crane:before {
+  content: "\e915";
+}
+.ci-drill:before {
+  content: "\e916";
+}
+.ci-hand:before {
+  content: "\e917";
+}
+.ci-house:before {
+  content: "\e918";
+}
+.ci-jacket:before {
+  content: "\e919";
+}
+.ci-pencil-ruler:before {
+  content: "\e91a";
+}
+.ci-tools:before {
+  content: "\e91b";
+}
+.ci-truck:before {
+  content: "\e91c";
+}
+.ci-engineer:before {
+  content: "\e91d";
+}
